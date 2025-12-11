@@ -1,0 +1,41 @@
+{
+	"realm": "ecom",
+	"enabled": true,
+	"accessTokenLifespan": 86400,
+	"refreshTokenLifespan": 604800,
+	"ssoSessionIdleTimeout": 604800,
+	"ssoSessionMaxLifespan": 604800,
+	"clients": [
+		{
+			"clientId": "ecom-client",
+			"enabled": true,
+			"publicClient": false,
+			"secret": "ecom-secret",
+			"protocol": "openid-connect",
+			"redirectUris": [],
+			"directAccessGrantsEnabled": true,
+			"serviceAccountsEnabled": true
+		}
+	],
+	"roles": {
+		"realm": {
+			"platform_admin": {},
+			"tenant_admin": {},
+			"user": {}
+		}
+	},
+	"users": [
+		{
+			"username": "plat_admin",
+			"enabled": true,
+			"credentials": [
+				{
+					"type": "password",
+					"value": "admin",
+					"temporary": false
+				}
+			],
+			"realmRoles": ["platform_admin"]
+		}
+	]
+}
